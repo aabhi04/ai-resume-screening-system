@@ -3,21 +3,21 @@
 An AI-powered system that automatically screens and ranks resumes
 based on their relevance to a given job description using NLP techniques.
 
-## 🚀 Features
+## Features
 - Resume parsing and text preprocessing
 - Job description matching
 - Resume ranking using similarity scores
 - REST API using FastAPI
 - Interactive UI using Streamlit
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Python
 - NLP (TF-IDF, Cosine Similarity)
 - Scikit-learn
 - FastAPI
 - Streamlit
 
-## 📂 Project Structure
+## Project Structure
  ai-resume-screening-system/
 │
 ├── data/
@@ -29,7 +29,7 @@ based on their relevance to a given job description using NLP techniques.
 └── requirements.txt
 
 
-## 📌 Future Improvements
+## Future Improvements
 - BERT-based semantic matching
 - Bias detection and fairness checks
 - Explainable AI for resume ranking
