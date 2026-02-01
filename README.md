@@ -34,5 +34,5 @@ based on their relevance to a given job description using NLP techniques.
 - Bias detection and fairness checks
 - Explainable AI for resume ranking
 
-## 👤 Author
+## Author
 Abhishek
