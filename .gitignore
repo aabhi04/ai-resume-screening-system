@@ -1,0 +1,6 @@
+# Datasets
+data/resumes/*.csv
+data/**/*.zip
+
+# Jupyter
+.ipynb_checkpoints/
