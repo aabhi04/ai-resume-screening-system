@@ -1,6 +1,7 @@
 # src/skill_extractor.py
 
 from .preprocessing import clean_text, remove_stopwords
+import re
 
 SKILL_DB = [
     "python", "java", "c", "c++", "sql",
@@ -22,7 +23,7 @@ def extract_skills(text: str):
     found_skills = []
 
     for skill in SKILL_DB:
-        if skill in text:
+       if re.search(rf"\b{re.escape(skill)}\b", text):
             found_skills.append(skill)
 
     return list(set(found_skills))  # remove duplicates
