@@ -1,17 +1,30 @@
 import re
 import string
+import nltk
+from nltk.corpus import stopwords
 
-def clean_text(text: str) -> str:
-    """
-    Clean resume / job description text
-    """
-    if not isinstance(text, str):
-        return ""
+# Download stopwords (run once)
+nltk.download("stopwords")
 
+STOPWORDS = set(stopwords.words("english"))
+
+def clean_text(text):
+    # Lowercase
     text = text.lower()
-    text = re.sub(r'\n', ' ', text)
-    text = re.sub(r'\d+', '', text)
-    text = text.translate(str.maketrans('', '', string.punctuation))
-    text = re.sub(r'\s+', ' ', text)
 
-    return text.strip()
+    # Remove numbers
+    text = re.sub(r"\d+", "", text)
+
+    # Remove punctuation
+    text = text.translate(str.maketrans("", "", string.punctuation))
+
+    # Remove extra whitespace
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
+
+
+def remove_stopwords(text):
+    words = text.split()
+    filtered_words = [word for word in words if word not in STOPWORDS]
+    return " ".join(filtered_words)
