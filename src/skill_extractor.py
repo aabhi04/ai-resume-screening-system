@@ -1,5 +1,7 @@
 # src/skill_extractor.py
 
+from .preprocessing import clean_text, remove_stopwords
+
 SKILL_DB = [
     "python", "java", "c", "c++", "sql",
     "machine learning", "deep learning", "nlp",
