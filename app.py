@@ -32,6 +32,12 @@ if st.button("Analyze Match"):
         st.write("###  Matched Skills")
         st.write(", ".join(result["matched_skills"]))
 
+        st.write("###  Missing Skills (Skill Gap)")
+        if result["missing_skills"]:
+           st.write(", ".join(result["missing_skills"]))
+        else:
+           st.success("No skill gaps detected! Excellent match.")
+
         st.metric(" Match Score", f"{result['match_score']} %")
 
     else:
